@@ -1,12 +1,22 @@
+pip install -r requirements.txt
+
 import pandas as pd
 from pathlib import Path
 import json
 import sys
 from datetime import datetime
 from dateutil import parser
+<<<<<<< Updated upstream
 
 import sys
+=======
+import sys
+sys.path.append('C:\\Users\\smk19\\Documents\\Github\\cone-db\\scripts\\utils.py')
+import utils
+ 
+>>>>>>> Stashed changes
 from utils import calculate_HRR, calculate_MFR, colorize
+
 
 # first argument is the input directory, 2nd argument is the output directory
 args = sys.argv[1:]
@@ -18,9 +28,14 @@ if len(args) > 2:
 
 # relative to the path the script is being run from
 # assumes the script is being run from the root of the repo
+<<<<<<< Updated upstream
 ## ex path matching INPUT_DIR: C:Users/user-id/path-to-repo-folder/cone-db/data/raw/FTT
 INPUT_DIR = Path(r"../data/raw/FTT")
 OUTPUT_DIR = Path(r"../data/auto-processed/FTT")
+=======
+INPUT_DIR = Path(INPUT_DIR = Path(r"./data/tree_data"))
+OUTPUT_DIR = Path('C:\\Users\\smk19\\Documents\\python\\tree_data')
+>>>>>>> Stashed changes
 
 if len(args) == 2:
     INPUT_DIR = Path(args[0])
